@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { UsersService } from './users.service';
-import { UsersResponseDto } from './dto/users-response.dto';
+import { UsersResponseDto } from './dto/users.dto';
 import { plainToInstance } from 'class-transformer';
 
 @Controller()
