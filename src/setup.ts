@@ -14,7 +14,11 @@ export function setup(app: INestApplication) {
     .setDescription('The API description')
     .setVersion('1.0')
     .build();
-  const document = SwaggerModule.createDocument(app, config);
+  const document = SwaggerModule.createDocument(app, config, {
+    classTransformer: {
+      strategy: 'excludeAll',
+    },
+  });
   SwaggerModule.setup('docs', app, document);
 
   return app;
